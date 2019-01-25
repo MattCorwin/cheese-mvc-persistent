@@ -46,6 +46,10 @@ public class Menu {
         return cheeses;
     }
 
+    public void removeCheese(Cheese cheese) {
+        this.cheeses.remove(cheese);
+    }
+
     public void addItem(Cheese item) {
         this.cheeses.add(item);
     }

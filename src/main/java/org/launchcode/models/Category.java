@@ -39,4 +39,12 @@ public class Category {
     public void setName(String name) {
         this.name = name;
     }
+
+    public List<Cheese> getCheeses() {
+        return cheeses;
+    }
+
+    public void removeCheese(Cheese cheese) {
+        this.cheeses.remove(cheese);
+    }
 }

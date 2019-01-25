@@ -16,13 +16,18 @@
                 <th>Category</th>
             </tr>
             <tr th:each="menu : ${menus}">
-                <td th:text="<a href='/menu/view/${menu.id}'>${menu.name}</a>"></td>
+                <td>
+                    <a th:href="@{'/menu/view/' + ${menu.id}}" th:text="${menu.name}"></a>
+
+                <tr th:each="cheese : ${menu.cheeses}">
+                    <td th:text="${cheese.name}"></td>
+                    <td th:text="${cheese.description}"></td>
+                    <td th:text="${cheese.category.name}"></td>
+                </tr>
+
+                </td>
             </tr>
-            <tr th:each="cheese : ${menu.cheeses}">
-                <td th:text="${cheese.name}"></td>
-                <td th:text="${cheese.description}"></td>
-                <td th:text="${cheese.category.name}"></td>
-            </tr>
+
 
         </table>
 
